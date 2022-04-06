@@ -17,13 +17,35 @@ const App = () => {
     }, []);
 
     const getTasks = () => {
-        axios.get("/")
+        setTasks([
+            {
+                "id": 1,
+                "name": "Task1",
+                "complete": false
+            },
+            {
+                "id": 2,
+                "name": "Task2",
+                "complete": false
+            },
+            {
+                "id": 3,
+                "name": "ddd",
+                "complete": false
+            },
+            {
+                "id": 4,
+                "name": "ddd",
+                "complete": false
+            }
+        ]);
+        /*axios.get("/")
             .then(response => {
                 setTasks(response.data);
             })
             .catch(error => {
                 alert("Chyba při načítání tasků z DB!!!");
-            })
+            })*/
     }
 
     const addTask = (values) => {
@@ -63,8 +85,7 @@ const App = () => {
     }
 
     return (<div>
-        <div>
-            <section>
+            <section className={"widget"}>
                 <Form onSubmit={addTask}
                       validate={values => {
                           let errors = {};
@@ -83,19 +104,20 @@ const App = () => {
                                               {...input}
                                               name={"name"}
                                               type={"text"}
+                                              className={"form-input"}
                                               placeholder={"Zadejte název"}
                                           />
-                                          {meta.error && meta.touched && <span>{meta.error}</span>}
+                                          {meta.error && meta.touched && <span className={"form-error"}>{meta.error}</span>}
                                       </>
                                   )}
                               </Field>
-                              <button type={"submit"} onClick={handleSubmit} name={"btnSubmit"}>Přidat</button>
+                              <button className={"button-form"} type={"submit"} onClick={handleSubmit} name={"btnSubmit"}>Přidat</button>
 
                           </>
                       )}
                 />
             </section>
-        </div>
+            <a href={"https://github.com/kar-los97/nnpia-web-page/tree/master"}>Link to GITHUB</a>
         <Tasks tasks={tasks} onClick={completeTask}/>
     </div>)
 }
@@ -111,11 +133,13 @@ const Task = (props) => (
 )
 
 const Tasks = (props) => (
-    <table>
+    <section className={"widget"}>
+    <table className={"table-striped"}>
         {props.tasks.filter(item => !item.complete).map((filteretItem, index) => <Task task={filteretItem}
                                                                                        onClick={props.onClick}
                                                                                        key={index.toString()}/>)}
     </table>
+    </section>
 )
 
 

@@ -3,12 +3,12 @@
     {
       "id": 1,
       "name": "Task1",
-      "complete": true
+      "complete": false
     },
     {
       "id": 2,
       "name": "Task2",
-      "complete": true
+      "complete": false
     },
     {
       "id": 3,
