@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nnpia-web-page/static/css/main.2b92ea79.css",
-    "main.js": "/nnpia-web-page/static/js/main.5d943644.js",
+    "main.js": "/nnpia-web-page/static/js/main.c9905070.js",
     "static/js/787.b5288f11.chunk.js": "/nnpia-web-page/static/js/787.b5288f11.chunk.js",
     "index.html": "/nnpia-web-page/index.html",
     "main.2b92ea79.css.map": "/nnpia-web-page/static/css/main.2b92ea79.css.map",
-    "main.5d943644.js.map": "/nnpia-web-page/static/js/main.5d943644.js.map",
+    "main.c9905070.js.map": "/nnpia-web-page/static/js/main.c9905070.js.map",
     "787.b5288f11.chunk.js.map": "/nnpia-web-page/static/js/787.b5288f11.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2b92ea79.css",
-    "static/js/main.5d943644.js"
+    "static/js/main.c9905070.js"
   ]
 }
