@@ -17,35 +17,13 @@ const App = () => {
     }, []);
 
     const getTasks = () => {
-        setTasks([
-            {
-                "id": 1,
-                "name": "Task1",
-                "complete": false
-            },
-            {
-                "id": 2,
-                "name": "Task2",
-                "complete": false
-            },
-            {
-                "id": 3,
-                "name": "ddd",
-                "complete": false
-            },
-            {
-                "id": 4,
-                "name": "ddd",
-                "complete": false
-            }
-        ]);
-        /*axios.get("/")
+        axios.get("/")
             .then(response => {
                 setTasks(response.data);
             })
             .catch(error => {
                 alert("Chyba při načítání tasků z DB!!!");
-            })*/
+            })
     }
 
     const addTask = (values) => {
